@@ -1,4 +1,18 @@
+.weather-app {
+  max-width: 600px;
+  margin: 30 auto;
+  padding: 20px;
+  border: 1px solid #989ca0;
+  border-radius: 5px;
+}
+
 #city, #conditions {
-  color:coral;
+  color:#24242b;
   list-style: none;
+}
+
+#city { 
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 28px;
 }
