@@ -9,8 +9,11 @@ body {
   max-width: 600px;
   margin: 30 auto;
   padding: 20px;
-  border: 1px solid #989ca0;
+  border: 2px solid #989ca0;
   border-radius: 5px;
+}
+#search-button {
+border: 1px solid #989ca0;
 }
 
 #city, #conditions {
