@@ -14,7 +14,7 @@ body {
 }
 #search-button {
 border: 1px solid #989ca0;
-padding: 48px 38px;
+
 }
 
 #city, #conditions {
@@ -22,3 +22,6 @@ padding: 48px 38px;
   list-style: none;
 }
 
+#city {
+  font-size: 24px;
+}
