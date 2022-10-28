@@ -5,6 +5,9 @@ body {
   font-family: sans-serif;
 }
 
+#container {
+  padding-top: 38px;
+}
 .weather-app {
   max-width: 600px;
   margin: 30 auto;
