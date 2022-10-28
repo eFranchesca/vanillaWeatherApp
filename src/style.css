@@ -14,6 +14,7 @@ body {
 }
 #search-button {
 border: 1px solid #989ca0;
+padding: 48px 38px;
 }
 
 #city, #conditions {
