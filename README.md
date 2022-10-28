@@ -1,6 +1,6 @@
 # vanillaWeatherApp
 
-This is my first project that I have built and hosted, it's still a work in progress. So I apologize for the construction and mess, lol 🚧🏗️
+This is one of my first projects that I have built and hosted, it's still a work in progress. So I apologize for the construction and mess, lol 🚧🏗️
 
 👋 Hi, I’m @eFranchesca, I prefer just Eva (pronounced Ava).
 
