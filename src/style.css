@@ -5,6 +5,10 @@ body {
   font-family: sans-serif;
 }
 
+#container {
+  padding-top: 38px;
+  margin-top: 38px;
+}
 .weather-app {
   max-width: 600px;
   margin: 30 auto;
@@ -19,7 +23,7 @@ body {
 }
 
 #city { 
-  font-size: 36px;
+  font-size: 30px;
   font-weight: 100;
-  line-height: 28px;
+  line-height: 40px;
 }
