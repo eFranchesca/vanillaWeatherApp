@@ -5,13 +5,17 @@ body {
   font-family: sans-serif;
 }
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 600px;
   margin: 30 auto;
+}
+
+.weather-app {
   padding: 20px;
   border: 2px solid #989ca0;
   border-radius: 5px;
 }
+
 #search-button {
 border: 1px solid #989ca0;
 
