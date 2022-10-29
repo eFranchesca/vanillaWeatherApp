@@ -19,7 +19,7 @@ border: 1px solid #989ca0;
 
 #city {
   font-size: 24px;
-  line-height:30px;
+  line-height:27px;
 
 }
 
@@ -37,4 +37,5 @@ border: 1px solid #989ca0;
   padding: 20px;
   border: 2px solid #989ca0;
   border-radius: 5px;
+  box-shadow: 10px 10px 5px lightblue;
 }
