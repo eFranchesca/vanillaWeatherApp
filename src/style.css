@@ -2,7 +2,30 @@ body {
   background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/050/135/original/beach.jpg?1666744406);
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: sans-serif;
+  font-family: 'Poppins',sans-serif;
+}
+
+#search-button {
+border: 1px solid #989ca0;
+
+}
+
+#city, #conditions {
+  color:#24242b;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#city {
+  font-size: 24px;
+  line-height:30px;
+
+}
+
+#conditions {
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .weather-app-wrapper {
@@ -14,18 +37,4 @@ body {
   padding: 20px;
   border: 2px solid #989ca0;
   border-radius: 5px;
-}
-
-#search-button {
-border: 1px solid #989ca0;
-
-}
-
-#city, #conditions {
-  color:#24242b;
-  list-style: none;
-}
-
-#city {
-  font-size: 24px;
 }
