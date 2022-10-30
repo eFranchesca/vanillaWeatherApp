@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/><link rel="stylesheet" href="src/style.css"/>
+<link rel="stylesheet" href="src/style.css"/>
 
 <title>vanillaWeatherApp</title>
 </head>
@@ -23,18 +23,20 @@
     <div class="weather-app">
       <button type="button" class="btn btn-light" id="search-button">Search</button>
       <a href="" class="btn btn-dark" id="currect-location-button">📌</a>
+      
       <div class="row">
         <div class="col-6" id="city">
-        <li>
-        <strong>Fort Lauderdale</strong>
-        </li>
-        <li>11:03 am</li>
-        <li>83°F</li>
+         <div id="city">
+          <strong>Fort Lauderdale</strong>
+         </div>
+          <div id="time">11:03 am</div>
+            <span id="temperature"></span><span class="units">°F</span>            
       </div>
+
         <div class="col-6" id="conditions">
-          <li>🌤️</li>
-          <li>Partly Cloudy</li>
-          <li>Humidity: 60%</li>
+          <div>🌤️</div>
+          <div>Partly Cloudy</div>
+          <div>Feels Like 89°F</div>
         </div>
 
    
