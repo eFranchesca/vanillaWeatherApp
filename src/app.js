@@ -10,39 +10,37 @@ function formatDate(timestamp) {
   }
 
  let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  "Sun",
+  "Mon",
+  "Tues",
+  "Wed",
+  "Thur",
+  "Fri",
+  "Sat",
  ];
  let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
 
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
-  return days[day];
-}
-
 function displayTemperature(response) {
   console.log(response.data);
- let temperatureElement = document.querySelector("#temperature");  
  let cityElement = document.querySelector("#city");
+ let dateElement = document.querySelector("#date");
+ let temperatureElement = document.querySelector("#temperature");  
  let descriptionElement = document.querySelector("#description");
+ let feelsLikeElement = document.querySelector("#feelsLike");
  let windElement = document.querySelector("#wind");
- let dateElement = document.querySelector("#time");
 
+ 
+
+
+ dateElement.innerHTML = formatDate(response.data.dt * 1000);
  temperatureElement.innerHTML = Math.round(response.data.main.temp);
  descriptionElement.innerHTML = response.data.weather[0].description;
+ feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
  windElement.innerHTML = Math.round(response.data.wind.speed);
- dateElement = formatDate(response.data.dt * 1000);
  
+ console.log(dateElement);
 }
 
 let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
