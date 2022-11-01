@@ -37,14 +37,12 @@ function displayTemperature(response) {
  let descriptionElement = document.querySelector("#description");
  let windElement = document.querySelector("#wind");
  let dateElement = document.querySelector("#time");
- let feelsLikeElement = document.querySelector("#feelsLike");
 
  temperatureElement.innerHTML = Math.round(response.data.main.temp);
  descriptionElement.innerHTML = response.data.weather[0].description;
  windElement.innerHTML = Math.round(response.data.wind.speed);
  dateElement = formatDate(response.data.dt * 1000);
- feelsLikeElement = response.data.main.feels_like;
-  console.log(response.data.main.feels_like);
+ 
 }
 
 let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
