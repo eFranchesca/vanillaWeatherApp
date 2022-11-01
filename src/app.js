@@ -23,25 +23,23 @@ return `${day} ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
  let cityElement = document.querySelector("#city");
  let dateElement = document.querySelector("#date");
  let temperatureElement = document.querySelector("#temperature");  
  let descriptionElement = document.querySelector("#description");
+ let iconElement = document.querySelector("#icon");
  let feelsLikeElement = document.querySelector("#feelsLike");
- let windElement = document.querySelector("#wind");
+ let windElement = document.querySelector("#wind"); 
 
  
-
-
  dateElement.innerHTML = formatDate(response.data.dt * 1000);
  temperatureElement.innerHTML = Math.round(response.data.main.temp);
  descriptionElement.innerHTML = response.data.weather[0].description;
  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
  windElement.innerHTML = Math.round(response.data.wind.speed);
- 
- console.log(dateElement);
-}
+ iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+ iconElement.setAttribute("alt", response.data.weather[0].description);
+ }
 
 let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Fort Lauderdale&appid=${apiKey}&units=imperial`;
