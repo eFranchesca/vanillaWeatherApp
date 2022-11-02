@@ -37,8 +37,9 @@ function displayTemperature(response) {
  descriptionElement.innerHTML = response.data.weather[0].description;
  feelsLikeElement.innerHTML = Math.round(response.data.main.feels_like);
  windElement.innerHTML = Math.round(response.data.wind.speed);
- iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
- iconElement.setAttribute("alt", response.data.weather[0].description);
+ iconElement.setAttribute("src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+iconElement.setAttribute("alt", response.data.weather[0].description);
  }
 
 let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
