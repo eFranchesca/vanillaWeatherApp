@@ -14,7 +14,7 @@ color: #989ca0;
 border: 1px solid #989ca0;
 }
 
-#city, #conditions {
+#city, #conditions, #cityTimeDate {
   color:#24242b;
   list-style: none;
   margin-top: 5px;
