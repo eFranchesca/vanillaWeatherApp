@@ -32,11 +32,8 @@ border: 1px solid #989ca0;
   line-height: 19px;
 }
 
-#icon {
-  font-size: x-large;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  
+#icon, #feelsLike {
+  margin: 0;  
 }
 
 .weather-app-wrapper {

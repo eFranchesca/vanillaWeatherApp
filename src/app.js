@@ -49,19 +49,19 @@ function displayTemperature(response) {
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description);
- console.log(response.data.weather[0].icon) 
+ console.log(response.data.weather[0].icon); 
 }
 
 function search(city) {
   let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Fort Lauderdale&appid=${apiKey}&units=imperial`;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   
   axios.get(apiUrl).then(displayTemperature);
 }
 
  function handleSubmit(event) {
   event.preventDefault();
-  let cityInputElement = document.querySelector("#city-input");
+  cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
  }
 
