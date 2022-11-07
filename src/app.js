@@ -10,22 +10,58 @@ function formatDate(timestamp) {
   }
 
  let days = [
-  "Sun",
-  "Mon",
-  "Tues",
-  "Wed",
-  "Thur",
-  "Fri",
-  "Sat",
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thurday",
+  "Friday",
+  "Satday",
  ];
  let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
 
-function getForcast(coordinatesButton) {
+function getForecast(coordinatesButton) {
   let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
+  console.log(displayForecast);
+}
+
+function displayForecast() {
+let forecastElement = document.querySelector("#forecast");
+
+let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+
+let forecastHTML = `<div class="row">`;
+days.forEach(function (day) {
+forecastHTML = 
+  forecastHTML + 
+  `
+    <div class="col-2">
+      <span class="weather-forecast-day">${day}</span>
+        <span>
+        <img
+        id="daily-icon"
+        src="http://openweathermap.org/img/wn/02d@2x.png"
+        alt=""
+        width="30"
+      /span>
+      <span class="weather-forecast-temps">
+        <span class="weather-forecast-temp-high">85°</span>
+        <span class="weather-forecast-temp-low">/ 77°</span>
+      </span>
+    </div>
+  `;
+  });
+
+forecastHTML = forecastHTML + `</div>`;
+forecastElement.innerHTML = forecastHTML;
+}
+
+function getForcast(coordinates) {
+console.log(coordinates);
 }
 
 function displayTemperature(response) {
@@ -48,6 +84,9 @@ function displayTemperature(response) {
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description); 
+
+  getForecast(response.data.coord);
+
 }
 
 function search(city) {
@@ -67,3 +106,4 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Fort Lauderdale");
+displayForecast();
