@@ -22,21 +22,22 @@ function formatDate(timestamp) {
 return `${day} ${hours}:${minutes}`;
 }
 
-function getForecast(coordinatesButton) {
+function getForecast(coordinates) {
   let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
   console.log(displayForecast);
 }
 
-function displayForecast() {
-let forecastElement = document.querySelector("#forecast");
+function displayForecast(response) {
 
-let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+ let forecastElement = document.querySelector("#forecast");
 
-let forecastHTML = `<div class="row">`;
-days.forEach(function (day) {
-forecastHTML = 
+ let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
+
+ let forecastHTML = `<div class="row">`;
+ days.forEach(function (day) {
+ forecastHTML = 
   forecastHTML + 
   `
     <div class="col-2">
@@ -56,8 +57,8 @@ forecastHTML =
   `;
   });
 
-forecastHTML = forecastHTML + `</div>`;
-forecastElement.innerHTML = forecastHTML;
+ forecastHTML = forecastHTML + `</div>`;
+ forecastElement.innerHTML = forecastHTML;
 }
 
 function getForcast(coordinates) {
@@ -106,4 +107,3 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Fort Lauderdale");
-displayForecast();
