@@ -30,7 +30,7 @@ function getForecast(coordinates) {
 }
 
 function displayForecast(response) {
-
+ console.log(response.data.daily);
  let forecastElement = document.querySelector("#forecast");
 
  let days = ["Sat", "Sun", "Mon", "Tues", "Wed"];
@@ -59,10 +59,6 @@ function displayForecast(response) {
 
  forecastHTML = forecastHTML + `</div>`;
  forecastElement.innerHTML = forecastHTML;
-}
-
-function getForcast(coordinates) {
-console.log(coordinates);
 }
 
 function displayTemperature(response) {
