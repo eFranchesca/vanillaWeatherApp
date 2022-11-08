@@ -22,12 +22,6 @@ function formatDate(timestamp) {
  return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast(response) {
-  let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
- 
-  let forecastHTML = `<div class="row">`;
-
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -35,6 +29,12 @@ function formatDay(timestamp) {
 
   return days[day];
 }
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+ 
+  let forecastHTML = `<div class="row">`;
 
  forecast.forEach(function (forecastDay, index) {
   if (index < 5) {
@@ -44,7 +44,7 @@ function formatDay(timestamp) {
         <span class="weather-class-date">${formatDay(forecastDay.time)}</span>
         <span>
         <img
-        src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+        src="https://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
         alt=""
         width="30"
         id="daily-icon"
@@ -88,7 +88,7 @@ function displayTemperature(response) {
  windElement.innerHTML = Math.round(response.data.wind.speed);
  iconElement.setAttribute(
   "src",
-  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   iconElement.setAttribute("alt", response.data.weather[0].description); 
 
