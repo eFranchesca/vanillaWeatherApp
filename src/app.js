@@ -66,7 +66,7 @@ function displayForecast(response) {
 }
 
 function getForecast(coordinates) {
-  let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
+  let apiKey = "7d478f69e1b2f5d563653f13f5f91d76"; 
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -96,7 +96,7 @@ function displayTemperature(response) {
 }
 
 function search(city) {
-  let apiKey = "7d478f69e1b2f5d563653f13f5f91d76";
+  let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   
   axios.get(apiUrl).then(displayTemperature);
@@ -107,12 +107,6 @@ function search(city) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
  }
-
- function searchCurrentPosition(position) {
-  let apiKey = "03681td6f2obc7b09ad4ba80345b8b9f";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayTemperature);
-}
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
